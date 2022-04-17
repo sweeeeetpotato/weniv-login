@@ -1,0 +1,235 @@
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+.clear-fix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+body {
+    background: #F2F2F2;
+}
+
+.cont-login {
+    width: 500px;
+    padding: 29px;
+    margin: 280px auto;
+    text-align: center;
+
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.cont-login .img-logo {
+    width: 122px;
+    margin: 8px 0 36px;
+}
+.cont-login .text-login {
+    margin-bottom: 32px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+.cont-login .button-login {
+    width: 440px;
+    padding: 17px 0 15px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: #FFFFFF;
+
+    background: #2F80ED;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* backdrop-filter: blur(4px) */
+
+
+/* modal */
+.cont-modal {
+    width: 520px;
+    margin: 50px auto;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: none;
+}
+.cont-modal .head-modal {
+    text-align: center;
+    padding: 19px 0 18px;
+    border-bottom: 1px solid #C4C4C4;
+    position: relative;
+}
+.head-modal .title-modal {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.head-modal a::after {
+    content: url(images/close.png);
+    position: absolute;
+    right: 23px;
+}
+
+.cont-modal .main-modal {
+    padding: 25px 23px 24px;
+}
+.main-modal .text-modal {
+    margin-bottom: 23px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* form양식 */
+.form-login .box {
+    /* 마진겹침 현상을 주기위해 block선언. 
+    선언하지 않을시 아래에 있는 label-checkbox와 마진이 겹치지않음.*/
+    display: block; 
+    width: 472px;
+    padding: 14px 15px;
+    margin-bottom: 10px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #767676;
+
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 5px;   
+}
+
+.form-login .input-checkbox {
+    display: none;
+}
+.form-login .label-checkbox {
+    display: block;
+    margin: 16px 0 20px;
+    padding-left: 30px;
+    cursor: pointer;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #767676;
+
+    background-image: url("images/icon_check_empty.png");
+    background-repeat: no-repeat;
+}
+.form-login .input-checkbox:checked + .label-checkbox {
+    background-image: url("images/icon_check.png");
+    background-repeat: no-repeat;
+}
+.form-login .button-login {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+
+    background: #2F80ED;
+    border: none;
+    cursor: pointer;
+}
+
+/* 회원가입, 아이디비번찾기 */
+.main-modal .cont-join-find {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.cont-join-find a {
+    text-decoration: none;
+    color: #767676;
+}
+.cont-join-find [class^=link] {
+    margin: 0 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px; 
+}
+.cont-join-find span::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #767676;
+}
+
+/* 또는 */
+.main-modal .text-or {
+    position: relative;
+    margin-bottom: 20px;
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;  
+
+    color: #767676;
+    text-align: center;
+}
+.main-modal .text-or::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 210px;
+    height: 1px;
+    background-color: #C4C4C4;
+}
+.main-modal .text-or::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 210px;
+    height: 1px;
+    background-color: #C4C4C4;
+}
+
+/* SNS로그인 */
+.list-login a {
+    display: block;
+    
+    padding: 10px 11px;
+    margin-top: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #767676;
+    text-align: center;
+    text-decoration: none;
+
+    box-sizing: border-box;
+    border-radius: 5px; 
+}
+.list-login .link-google {
+    border: 1px solid #767676;
+}
+.list-login .link-facebook {
+    border: 1px solid #2D9CDB;
+}
+.list-login .link-naver {
+    border: 1px solid #00BF18;
+}
+.list-login .link-kakaotalk {
+    border: 1px solid #F2C94C;
+}
+.list-login [class^=img] {
+    float: left;
+}
