@@ -51,9 +51,6 @@ body {
     cursor: pointer;
 }
 
-/* backdrop-filter: blur(4px) */
-
-
 /* modal */
 .cont-modal {
     width: 520px;
